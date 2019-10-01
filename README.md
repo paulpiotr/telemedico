@@ -8,15 +8,15 @@
  - Komenda: composer update
  - 3) Baza danych:
 
-Dane do logogania zmieniamy w pliku .env Dla potrzeby projektu przykładowa konfiguracja: 
+ - Dane do logogania zmieniamy w pliku .env Dla potrzeby projektu przykładowa konfiguracja: 
 
-DB_HOST=127.0.0.1
-DB_USER=telemedico
-DB_PASSWORD=telemedico
-DB_NAME=telemedico
-DB_PORT=5432
+- DB_HOST=127.0.0.1
+- DB_USER=telemedico
+- DB_PASSWORD=telemedico
+- DB_NAME=telemedico
+- DB_PORT=5432
 
-DATABASE_URL=pgsql://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}
+- DATABASE_URL=pgsql://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}
 
  - 4) Instalacja schematu:
  - Komenda: php bin/console doctrine:migrations:migrate
@@ -24,22 +24,22 @@ DATABASE_URL=pgsql://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}
 
  # Konfiguracja apache:
 
-<VirtualHost DOMENA:80>
-ServerName DOMENA
-DocumentRoot KATALOG WWW/DOMENA/public
-<Directory KATALOG WWW/DOMENA/public>
-    Require all granted
-    Options FollowSymlinks
-    <IfModule mod_rewrite.c>
-        Options -MultiViews
-        RewriteEngine On
-        RewriteCond %{REQUEST_FILENAME} !-f
-        RewriteRule ^(.*)$ index.php [QSA,L]
-    </IfModule>
-</Directory>
-ErrorLog KATALOG WWW/DOMENA/error.log
-CustomLog KATALOG WWW/DOMENA/access.log combined
-</VirtualHost>
+- <VirtualHost DOMENA:80>
+- ServerName DOMENA
+- DocumentRoot KATALOG WWW/DOMENA/public
+- <Directory KATALOG WWW/DOMENA/public>
+-     Require all granted
+-     Options FollowSymlinks
+-     <IfModule mod_rewrite.c>
+-         Options -MultiViews
+-         RewriteEngine On
+-         RewriteCond %{REQUEST_FILENAME} !-f
+-         RewriteRule ^(.*)$ index.php [QSA,L]
+-     </IfModule>
+- </Directory>
+- ErrorLog KATALOG WWW/DOMENA/error.log
+- CustomLog KATALOG WWW/DOMENA/access.log combined
+- </VirtualHost>
 
  # Wywoływanie komend:
 
