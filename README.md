@@ -48,6 +48,6 @@
   - Nowy user z logowaniem:
   - curl -X PUT -H 'Accept: application/json' -i 'http://telemedico/user/add/paul.piotr@gmail.com/qwerty' --data '{"email":"paul.piotr@gmail.com","password":"qwerty"}'
   - Logowanie:
-  - curl -X PUT -H 'Accept: application/json' -i 'http://telemedico/user/login/paul.piotr@gmail.com/qwerty' --data '{"email":"paul.piotr@gmail.com","password":"qwerty"}'
+  - curl -X PUT -H 'Accept: application/json' -i 'http://telemedico/user/login/paul.piotr@gmail.com/qwerty'
   - Usuwanie użytkownika:
-  - curl -X PUT -H 'Accept: application/json' -i 'http://telemedico/user/delete/2/paul.piotr@gmail.com/qwerty' --data '{"email":"paul.piotr2@gmail.com","password":"qwerty"}'
+  - curl -X PUT -H 'Accept: application/json' -i 'http://telemedico/user/delete/2/paul.piotr@gmail.com/qwerty'
