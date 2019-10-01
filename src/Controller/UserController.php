@@ -17,6 +17,16 @@ use App\Form\Type\UserType;
  */
 class UserController extends Controller
 {
+
+    /**
+     * @Route("/new", name="user_new")
+     * @Method({"POST", "PUT"})
+     */
+    public function newAction(Request $request)
+    {
+        return $this->addAction($request);
+    }
+
     /**
      * @Route("/add/{email}/{password}", name="user_add")
      * @Method({"POST", "PUT"})
